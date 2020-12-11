@@ -7,13 +7,14 @@
   <select [(ngModel)] = "clienteSelecionado" class="browser-default"  name="cliente">
     <option  required *ngFor="let item of conta;" [value]="item.cliente"> {{item.cliente}}</option>  
   </select>  <br>
-  
-  <button>Enviar        
-  </button> 
-  <br>
-
   <p [hidden] = "!error" style="color: red;">
     {{ errorDesc }}
   </p> 
+  <br>
+  <button class="btn waves-effect waves-light" >Enviar        
+  </button> 
+  <br>
+
+  
   
 </form>  

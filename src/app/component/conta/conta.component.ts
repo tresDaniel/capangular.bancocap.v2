@@ -13,11 +13,11 @@ export class ContaComponent implements OnInit {
   errorDesc:string = "";
   clienteSelecionado:string = "";
   conta:Conta[] = [
-    {cliente: "Kalila"},
+    {cliente: "Arthur"},
     {cliente: "Daniel"},
-    {cliente: "Reinaldo"},
+    {cliente: "Kalila"},
     {cliente: "Nilson"},
-    {cliente: "Arthur"}  
+    {cliente: "Reinaldo"}  
   ];
 
   constructor(private router: Router) { }

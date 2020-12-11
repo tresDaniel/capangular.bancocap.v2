@@ -5,6 +5,7 @@ a {
 .nav-wrapper {
   background: #020024;
 }
+
 button.btn.waves-effect.waves-light {
   background-color: #020024 !important;
 }
@@ -67,4 +68,22 @@ tr > td > input {
 
 .checkbox-submit > label {
   margin-right: 320px;
+}
+
+.card-home .card {
+  background-color: #0071b1;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  border-radius: 10px;
+}
+
+.card-home .card-content {
+  text-align: center;
+  font-weight: 500;
+}
+
+.card-home .material-icons {
+  font-size: 40px !important;
 }

@@ -17,11 +17,11 @@ export class ContaViewComponent implements OnInit {
   ];
 
   linhas = [
-      { cliente: 'Daniel', hash: '001', saldo: 500 },
-      { cliente: 'Kalila', hash: '002', saldo: 255 },
-      { cliente: 'Reinaldo', hash: '003', saldo: 950 },
-      { cliente: 'Arthur', hash: '004', saldo: 260},
-      { cliente: 'Nilson', hash: '005', saldo: 260},
+      { cliente: 'Arthur', hash: '001', saldo: 500 },
+      { cliente: 'Daniel', hash: '002', saldo: 255 },
+      { cliente: 'Kalila', hash: '003', saldo: 950 },
+      { cliente: 'Nilson', hash: '004', saldo: 260},
+      { cliente: 'Reinaldo', hash: '005', saldo: 389},
   ];
 
   constructor() { }
