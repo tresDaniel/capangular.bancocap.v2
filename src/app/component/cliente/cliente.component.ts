@@ -6,7 +6,7 @@ import { Cliente } from 'src/app/model/cliente.model';
 @Component({
   selector: 'app-cliente',
   templateUrl: './cliente.component.html',
-  styleUrls: ['./cliente.component.css']
+  styleUrls: ['../../app.component.css']
 })
 export class ClienteComponent implements OnInit {
   cliente:Cliente = {};

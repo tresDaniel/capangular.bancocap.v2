@@ -15,7 +15,7 @@
   <p [hidden] = "!error" style="color: red;">
     {{ errorDesc }}
   </p>
-  <button class="btn waves-effect waves-light" style="width: 100%;" *ngIf="formLogin.valid"> <a routerLink="/home" routerLinkActive="active">Entrar</a>
+  <button class="btn waves-effect waves-light" style="width: 100%;" *ngIf="formLogin.valid"> <a style="color: #FFFFFF" routerLink="/home" routerLinkActive="active">Entrar</a>
   </button> 
 
   <button class="btn waves-effect waves-light" style="width: 100%;" *ngIf="!formLogin.valid" (click) = "onLoginErro(email.value, password.value)">Entrar

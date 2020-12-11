@@ -6,7 +6,7 @@ import { Conta } from 'src/app/model/conta.model';
 @Component({
   selector: 'app-conta',
   templateUrl: './conta.component.html',
-  styleUrls: ['./conta.component.css']
+  styleUrls: ['../../app.component.css']
 })
 export class ContaComponent implements OnInit { 
   error:boolean = false;

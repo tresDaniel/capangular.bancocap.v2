@@ -5,7 +5,7 @@ import { Conta } from 'src/app/model/conta.model';
 @Component({
   selector: 'app-conta-view',
   templateUrl: './conta-view.component.html',
-  styleUrls: ['./conta-view.component.css']
+  styleUrls: ['../../../app.component.css']
 })
 export class ContaViewComponent implements OnInit {
   conta:Conta = {cliente: "Kalila",hash:"1234463131",saldo: 2516};

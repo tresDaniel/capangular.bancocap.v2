@@ -6,7 +6,7 @@ import { Usuario } from 'src/app/model/usuario.model';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['../../app.component.css']
 })
 export class LoginComponent implements OnInit {
 
@@ -17,16 +17,7 @@ export class LoginComponent implements OnInit {
   constructor(private router: Router) { }
 
   onLogin(formLogin: NgForm){
-    /* if (this.usuario.email == "" ) {
-      this.error = true;      
-      this.errorDesc = "Preencha o campo e-mail"
-    } else if(this.usuario.senha == ""){
-      this.error = true;      
-      this.errorDesc = "Preencha o campo senha"  
-    } else{
-      this.error = false;
-      this.router.navigate(['/home']);
-    }  */   
+     
   }
 
   onLoginErro(email:string, password:string){
