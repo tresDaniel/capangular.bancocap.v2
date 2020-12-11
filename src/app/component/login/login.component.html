@@ -1,0 +1,37 @@
+
+  
+<form style="border: 2px solid #6d6565; padding: 20px; width: 500px; margin: 0 auto; margin-top: 60px;" #formLogin = "ngForm" (ngSubmit)="onLogin(formLogin)">
+  <h1>Login</h1>
+  <label for="email" >E-mail</label>
+  <input type="email"  name="email" #email="ngModel" ngModel required email><br> 
+  <label for="password" >Senha</label>
+  <input type="password" #password="ngModel"  ngModel name="password"><br>
+  
+  <br>
+  <div *ngIf="!email.valid && email.value" style="color: red;">
+    <p>Email inválido</p>
+  </div>
+  <br>
+  <p [hidden] = "!error" style="color: red;">
+    {{ errorDesc }}
+  </p>
+  <button class="btn waves-effect waves-light" style="width: 100%;" *ngIf="formLogin.valid"> <a routerLink="/home" routerLinkActive="active">Entrar</a>
+  </button> 
+
+  <button class="btn waves-effect waves-light" style="width: 100%;" *ngIf="!formLogin.valid" (click) = "onLoginErro(email.value, password.value)">Entrar
+  </button> 
+  <br>
+  
+  
+  <br>
+  <label>
+    <input name="conectado" type="checkbox" required>  
+    <span>Manter-se conectado</span>   
+  </label>
+  <br>
+  <a routerLink="/recuperar-senha" routerLinkActive="active">Esqueci a senha</a>
+  <br>
+  <a routerLink="/usuario" routerLinkActive="active">Cadastre-se</a>
+  
+
+</form>  

@@ -1,0 +1,29 @@
+<div>
+  <label for="nome" >Nome</label>
+  <input type="text"  [(ngModel)]="usuario.nome" name="nome"><br> 
+
+  <label for="email" >E-mail</label>
+  <input type="email"  [(ngModel)]="usuario.email" name="email"><br> 
+
+
+  <label for="dataDeNascimento" >Data de Nascimento</label>
+  
+  <input [(ngModel)]="usuario.dataDeNascimento" name="dataDeNascimento" >
+  
+  <input type="date"  [(ngModel)]="usuario.dataDeNascimento" name="dataDeNascimento"><br>  
+  
+
+  <label for="password" >Senha</label>
+  <input type="password" [(ngModel)]="usuario.senha"  name="password"><br>
+  <label for="password" >Confirmar Senha</label>
+  <input type="password" [(ngModel)]="usuario.senha"  name="confirmPassword"><br>
+  
+  <button (click)="onCadastrar()">Enviar        
+  </button> 
+  <br>
+ 
+  
+ <!--  <p [hidden] = "!error" style="color: red;">
+    {{ errorDesc }}
+  </p> -->
+</div>  
