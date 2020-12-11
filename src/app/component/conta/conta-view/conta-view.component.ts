@@ -17,17 +17,18 @@ export class ContaViewComponent implements OnInit {
   ];
 
   linhas = [
-      { cliente: 'Daniel', hash: '001', saldo: 2516 },
-      { cliente: 'Daniel', hash: '002', saldo: 2516 },
-      { cliente: 'Daniel', hash: '003', saldo: 2516 },
-      { cliente: 'Daniel', hash: '004', saldo: 2516},
+      { cliente: 'Daniel', hash: '001', saldo: 500 },
+      { cliente: 'Kalila', hash: '002', saldo: 255 },
+      { cliente: 'Reinaldo', hash: '003', saldo: 950 },
+      { cliente: 'Arthur', hash: '004', saldo: 260},
+      { cliente: 'Nilson', hash: '005', saldo: 260},
   ];
 
   constructor() { }
 
   currencyFormatter(saldo, sign) {
     var decimal = saldo.toFixed(2);
-    var formatado = decimal.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    var formatado = decimal.replace(/\B(?=(\d{3})+(?!\d))/g, '.').replace('.', ',');
     return sign + ' ' +formatado;
   }
 
