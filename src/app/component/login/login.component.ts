@@ -16,9 +16,9 @@ export class LoginComponent implements OnInit {
   
   constructor(private router: Router) { }
 
-  onLogin(formLogin: NgForm){
-     
-  }
+ /*  onLogin(formLogin: NgForm){
+    this.router.navigate(['/home']);
+  } */
 
   onLoginErro(email:string, password:string){
     console.log(email, password);
