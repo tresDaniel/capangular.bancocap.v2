@@ -28,7 +28,10 @@ export class LoginComponent implements OnInit {
     } else if(!password){
       this.error = true;      
       this.errorDesc = "Preencha o campo senha"  
-    } 
+    } else {
+      this.error = false;
+      this.router.navigate(['/home']);
+    }
   }
 
   ngOnInit(): void {
