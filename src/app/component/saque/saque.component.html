@@ -1,0 +1,23 @@
+<div class="form-container">
+  <form #form="ngForm" (ngSubmit)="onSaque(form)" novalidate ngForm>
+    <h1>Saque</h1>
+    <label for="date">Data</label>
+    <p>{{date | date: 'short' : 'pt-br'}}</p>
+
+    <label for="hash">Chave</label>
+    <input type="text" name="hash" #hash="ngModel" ngModel required><br>
+
+    <label for="valor">Valor</label>
+    <input type="number" name="valor" #valor="ngModel" ngModel required min="0.01" step="0.01"><br>
+
+    <br>
+    <p [hidden]="!error" style="color: red;">
+      {{ errorDesc }}
+    </p>
+    <br>
+    <button class="btn waves-effect waves-light" (mouseenter)="refeshDateTime()">
+      Enviar
+    </button>
+    <br>
+  </form>
+</div>

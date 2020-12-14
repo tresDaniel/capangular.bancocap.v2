@@ -4,7 +4,7 @@ import { Cliente } from 'src/app/model/cliente.model';
 @Component({
   selector: 'app-cliente-view',
   templateUrl: './cliente-view.component.html',
-  styleUrls: ['../../../app.component.css']
+  styleUrls: ['../../app.component.css', './cliente-view.component.css']
 })
 export class ClienteViewComponent implements OnInit {
 
@@ -14,11 +14,11 @@ export class ClienteViewComponent implements OnInit {
   ];
 
   linhas = [
-      { nome: 'Arthur', cpf: '001' },
-      { nome: 'Daniel', cpf: '002' },
-      { nome: 'Kalila', cpf: '003'},
-      { nome: 'Nilson', cpf: '004'},
-      { nome: 'Reinaldo', cpf: '005'},
+    { nome: 'Arthur', cpf: '001' },
+    { nome: 'Daniel', cpf: '002' },
+    { nome: 'Kalila', cpf: '003' },
+    { nome: 'Nilson', cpf: '004' },
+    { nome: 'Reinaldo', cpf: '005' },
   ];
 
   constructor() { }

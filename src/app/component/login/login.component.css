@@ -1,3 +1,10 @@
 a:link {
   text-decoration: none;
 }
+
+form {
+  border: 2px solid #6d6565;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 60px;
+}

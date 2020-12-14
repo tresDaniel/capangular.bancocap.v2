@@ -29,7 +29,6 @@ h2 {
   background-color: #26a69a;
   font-weight: 600;
   border-radius: 0px;
-
   text-align: center;
 }
 
@@ -86,4 +85,37 @@ tr > td > input {
 
 .card-home .material-icons {
   font-size: 40px !important;
+}
+
+.form-container{
+  margin: 0 auto;
+  padding: 32px;
+  min-width: 400px;
+  max-width: 700px;
+}
+
+.main-container{
+  margin: 0 auto;
+  margin-top: 32px;
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+.center{
+  margin: 0 auto;
+}
+
+
+#nav-mini{
+  display: none;
+}
+
+@media screen and (max-width: 930px) {
+#nav-mobile{
+      display: none;
+  }
+
+  #nav-mini{
+    display: block;
+  }
 }
