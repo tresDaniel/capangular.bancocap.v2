@@ -110,7 +110,7 @@ tr > td > input {
   display: none;
 }
 
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 1020px) {
 #nav-mobile{
       display: none;
   }

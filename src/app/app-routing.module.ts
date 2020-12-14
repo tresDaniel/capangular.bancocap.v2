@@ -11,6 +11,7 @@ import { UsuarioComponent } from './component/usuario/usuario.component';
 import { DepositoComponent } from './component/deposito/deposito.component';
 import { SaqueComponent } from './component/saque/saque.component';
 import { TransferenciaComponent } from './component/transferencia/transferencia.component';
+import { ExtratoComponent } from './component/extrato/extrato.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'deposito', component: DepositoComponent },
   { path: 'saque', component: SaqueComponent },
   { path: 'transferencia', component: TransferenciaComponent },
+  { path: 'extrato', component: ExtratoComponent },
   { path: 'home', component: HomeComponent },
   { path: 'recuperar-senha', component: RecuperarSenhaComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' }

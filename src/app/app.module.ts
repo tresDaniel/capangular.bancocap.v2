@@ -22,6 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DepositoComponent } from './component/deposito/deposito.component';
 import { SaqueComponent } from './component/saque/saque.component';
 import { TransferenciaComponent } from './component/transferencia/transferencia.component';
+import { ExtratoComponent } from './component/extrato/extrato.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -42,6 +43,7 @@ const maskConfig: Partial<IConfig> = {
     CPFPipe,
     SaqueComponent,
     TransferenciaComponent,
+    ExtratoComponent,
   ],
   imports: [
     BrowserModule,
