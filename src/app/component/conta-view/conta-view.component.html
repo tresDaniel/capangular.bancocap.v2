@@ -1,9 +1,11 @@
 <div class="form-container">
   <h1>Contas Cadastradas</h1>
-  <ag-grid-angular style="width: 100%;" class="ag-theme-alpine" [rowData]="linhas" (gridReady)="onGridReady($event)"
-    [editType]="'fullRow'" [frameworkComponents]="frameworkComponents" [columnDefs]="colunas" domLayout='autoHeight'>
+  <ag-grid-angular style="max-width: 1300px" class="ag-theme-alpine" [rowData]="linhas"
+    (gridReady)="onGridReady($event)" [editType]="'fullRow'" [frameworkComponents]="frameworkComponents"
+    [columnDefs]="colunas" domLayout='autoHeight'>
   </ag-grid-angular>
-  <a routerLink="/conta" routerLinkActive="active">Cadastrar Conta</a>
+  <a style="margin-top: 32px" class="btn waves-effect waves-light" routerLink="/conta"
+    routerLinkActive="active">Cadastrar Conta</a>
 </div>
 
 '
