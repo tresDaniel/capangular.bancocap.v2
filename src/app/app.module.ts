@@ -26,10 +26,8 @@ import { ExtratoComponent } from './component/extrato/extrato.component';
 import { ButtonComponent } from './component/button/button.component';
 import { CurrencyMaskModule } from 'ng2-currency-mask';
 import { ListClientesService } from './service/list-clientes.service';
+import { maskConfig, GOOGLE_URL } from './token';
 
-const maskConfig: Partial<IConfig> = {
-  validation: false,
-};
 
 @NgModule({
   declarations: [
@@ -63,6 +61,7 @@ const maskConfig: Partial<IConfig> = {
 
   ],
   providers: [
+    { provide: 'API_URL', useValue: GOOGLE_URL },
     ListClientesService,
   ],
   bootstrap: [AppComponent]
