@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Cliente } from 'src/app/model/cliente.model';
 import { Conta } from 'src/app/model/conta.model';
+import { ButtonComponent } from 'src/app/component/button/button.component';
+import { AgGridAngular } from 'ag-grid-angular';
 
 @Component({
   selector: 'app-conta-view',
@@ -10,10 +12,37 @@ import { Conta } from 'src/app/model/conta.model';
 export class ContaViewComponent implements OnInit {
   conta: Conta = { cliente: "Kalila", hash: "1234463131", saldo: 2516 };
 
+  frameworkComponents: any;
+  api: any;
+
   colunas = [
-    { field: 'cliente' },
+    { field: 'cliente', editable: true },
     { field: 'hash' },
     { field: 'saldo', valueFormatter: params => this.currencyFormatter(params.data.saldo, 'R$') },
+    {
+      headerName: 'Edit',
+      cellRenderer: 'buttonRenderer',
+      cellRendererParams: {
+        onClick: this.onEditButtonClick.bind(this),
+        label: 'Edit'
+      },
+    },
+    {
+      headerName: 'Save',
+      cellRenderer: 'buttonRenderer',
+      cellRendererParams: {
+        onClick: this.onSaveButtonClick.bind(this),
+        label: 'Save'
+      },
+    },
+    {
+      headerName: 'Delete',
+      cellRenderer: 'buttonRenderer',
+      cellRendererParams: {
+        onClick: this.onDeleteButtonClick.bind(this),
+        label: 'Delete'
+      },
+    },
   ];
 
   linhas = [
@@ -24,7 +53,11 @@ export class ContaViewComponent implements OnInit {
     { cliente: 'Reinaldo', hash: '005', saldo: 389 },
   ];
 
-  constructor() { }
+  constructor() {
+    this.frameworkComponents = {
+      buttonRenderer: ButtonComponent,
+    }
+  }
 
   currencyFormatter(saldo, sign) {
     var decimal = saldo.toFixed(2);
@@ -33,6 +66,28 @@ export class ContaViewComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  @ViewChild('agGrid') agGrid: AgGridAngular;
+
+  onEditButtonClick(params) {
+    this.api.startEditingCell({
+      rowIndex: params.rowIndex,
+      colKey: 'cliente'
+    });
+  }
+
+  onSaveButtonClick(params) {
+    this.api.stopEditing();
+  }
+
+  onDeleteButtonClick(params) {
+
+    this.api.updateRowData({ remove: [params.data] });
+  }
+
+  onGridReady(params) {
+    this.api = params.api;
   }
 
 }
