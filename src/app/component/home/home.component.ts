@@ -8,7 +8,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(@Inject('GOOGLE_URL') private apiURL: string) {
+  constructor(@Inject('API_URL') private apiURL: string) {
 
     console.log(apiURL);
   }
