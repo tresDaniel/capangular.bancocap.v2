@@ -11,7 +11,8 @@
     <input type="text" name="hashDestino" #hashDestino="ngModel" ngModel required><br>
 
     <label for="valor">Valor</label>
-    <input type="number" name="valor" #valor="ngModel" ngModel required min="0.01" step="0.01"><br>
+    <input name="valor" #valor="ngModel" ngModel
+      [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' , align: 'left' }" currencyMask><br>
 
     <br>
     <p [hidden]="!error" style="color: red;">

@@ -8,7 +8,9 @@
     <input type="text" name="hash" #hash="ngModel" ngModel required><br>
 
     <label for="valor">Valor</label>
-    <input type="number" name="valor" #valor="ngModel" ngModel required min="0.01" step="0.01" mask=""><br>
+    <input name="valor" ngModel #valor="ngModel"
+      [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' , align: 'left' }" currencyMask>
+    <br>
 
     <br>
     <p [hidden]="!error" style="color: red;">

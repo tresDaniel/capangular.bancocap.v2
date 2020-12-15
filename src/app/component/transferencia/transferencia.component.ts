@@ -23,13 +23,15 @@ export class TransferenciaComponent implements OnInit {
       form.value.hashDestino,
       form.value.valor,
     );
+
+
     this.refeshDateTime();
 
     if (form.value.hashOrigem == "") {
       this.error = true;
       this.errorDesc = "Preencha o hash da conta origem"
     }
-    if (form.value.hashDestino == "") {
+    else if (form.value.hashDestino == "") {
       this.error = true;
       this.errorDesc = "Preencha o hash da conta destino"
     }

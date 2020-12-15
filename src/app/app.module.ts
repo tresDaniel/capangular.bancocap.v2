@@ -24,6 +24,8 @@ import { SaqueComponent } from './component/saque/saque.component';
 import { TransferenciaComponent } from './component/transferencia/transferencia.component';
 import { ExtratoComponent } from './component/extrato/extrato.component';
 import { ButtonComponent } from './component/button/button.component';
+import { CurrencyMaskModule } from 'ng2-currency-mask';
+import { ListClientesService } from './service/list-clientes.service';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -54,12 +56,15 @@ const maskConfig: Partial<IConfig> = {
     NgxMaskModule.forRoot(maskConfig),
     AgGridModule.withComponents([]),
     BrowserAnimationsModule,
+    CurrencyMaskModule,
     /*  MatToolbarModule,
      MatButtonModule,
      MatDatepickerModule */
 
   ],
-  providers: [],
+  providers: [
+    ListClientesService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

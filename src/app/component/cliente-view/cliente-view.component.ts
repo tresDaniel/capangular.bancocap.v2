@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Cliente } from 'src/app/model/cliente.model';
 import { ButtonComponent } from 'src/app/component/button/button.component';
 import { AgGridAngular } from 'ag-grid-angular';
+import { ListClientesService } from 'src/app/service/list-clientes.service';
 
 @Component({
   selector: 'app-cliente-view',
@@ -41,18 +42,14 @@ export class ClienteViewComponent implements OnInit {
 
   ];
 
-  linhas = [
-    { nome: 'Arthur', cpf: '001' },
-    { nome: 'Daniel', cpf: '002' },
-    { nome: 'Kalila', cpf: '003' },
-    { nome: 'Nilson', cpf: '004' },
-    { nome: 'Reinaldo', cpf: '005' },
-  ];
+  linhas = [];
 
-  constructor() {
+  constructor(private clienteListService: ListClientesService) {
     this.frameworkComponents = {
       buttonRenderer: ButtonComponent,
     }
+
+    this.linhas = clienteListService.execute();
   }
 
   @ViewChild('agGrid') agGrid: AgGridAngular;
