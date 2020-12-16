@@ -25,7 +25,7 @@ import { TransferenciaComponent } from './component/transferencia/transferencia.
 import { ExtratoComponent } from './component/extrato/extrato.component';
 import { ButtonComponent } from './component/button/button.component';
 import { CurrencyMaskModule } from 'ng2-currency-mask';
-import { ListClientesService } from './service/list-clientes.service';
+import { TransacoesService } from './service/transacoes.service';
 import { maskConfig, GOOGLE_URL } from './token';
 
 
@@ -62,7 +62,7 @@ import { maskConfig, GOOGLE_URL } from './token';
   ],
   providers: [
     { provide: 'API_URL', useValue: GOOGLE_URL },
-    ListClientesService,
+    TransacoesService,
   ],
   bootstrap: [AppComponent]
 })

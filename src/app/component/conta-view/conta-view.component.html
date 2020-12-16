@@ -1,8 +1,12 @@
 <div class="form-container">
   <h1>Contas Cadastradas</h1>
-  <ag-grid-angular style="max-width: 1300px" class="ag-theme-alpine" [rowData]="linhas"
-    (gridReady)="onGridReady($event)" [editType]="'fullRow'" [frameworkComponents]="frameworkComponents"
-    [columnDefs]="colunas" domLayout='autoHeight'>
+  <ag-grid-angular style="max-width: 1300px" class="ag-theme-alpine" 
+    [rowData]="contas"
+    (gridReady)="onGridReady($event)" 
+    [editType]="'fullRow'" 
+    [frameworkComponents]="frameworkComponents"
+    [columnDefs]="colunas" 
+    domLayout='autoHeight'>
   </ag-grid-angular>
   <a style="margin-top: 32px" class="btn waves-effect waves-light" routerLink="/conta"
     routerLinkActive="active">Cadastrar Conta</a>

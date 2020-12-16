@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Cliente } from 'src/app/model/cliente.model';
 import { ButtonComponent } from 'src/app/component/button/button.component';
 import { AgGridAngular } from 'ag-grid-angular';
-import { ListClientesService } from 'src/app/service/list-clientes.service';
+import { TransacoesService } from 'src/app/service/transacoes.service';
 
 @Component({
   selector: 'app-cliente-view',
@@ -42,14 +42,15 @@ export class ClienteViewComponent implements OnInit {
 
   ];
 
-  linhas = [];
+  clientes = [];
 
-  constructor(private clienteListService: ListClientesService) {
+  constructor(private transacoesService: TransacoesService) {
     this.frameworkComponents = {
       buttonRenderer: ButtonComponent,
     }
 
-    this.linhas = clienteListService.execute();
+    var contas = transacoesService.execute();
+    this.clientes = contas.map(x => x.cliente);
   }
 
   @ViewChild('agGrid') agGrid: AgGridAngular;

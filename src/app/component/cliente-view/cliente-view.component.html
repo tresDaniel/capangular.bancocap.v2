@@ -1,8 +1,12 @@
 <div class="form-container">
   <h1>Clientes Cadastrados</h1>
-  <ag-grid-angular style="max-width: 1010px" class="ag-theme-alpine" [rowData]="linhas"
-    (gridReady)="onGridReady($event)" [editType]="'fullRow'" [frameworkComponents]="frameworkComponents"
-    [columnDefs]="colunas" domLayout='autoHeight'>
+  <ag-grid-angular style="max-width: 1010px" class="ag-theme-alpine" 
+    [rowData]="clientes"
+    (gridReady)="onGridReady($event)" 
+    [editType]="'fullRow'" 
+    [frameworkComponents]="frameworkComponents"
+    [columnDefs]="colunas" 
+    domLayout='autoHeight'>
   </ag-grid-angular>
   <a style="margin-top: 32px" class="btn waves-effect waves-light" routerLink="/cliente" routerLinkActive="active">
     Cadastrar Cliente </a>
